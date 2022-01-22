@@ -84,7 +84,7 @@ export const NavLinks = styled(LinkS)`
     border-bottom: 3px solid #ffd260;
   }
   &:hover{
-    border-bottom: 6px solid #fff;
+    border-bottom: 6px solid #ffd260;
     transition: all 0.2s ease-in-out;
     }
 `

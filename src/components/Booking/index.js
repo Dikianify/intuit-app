@@ -14,7 +14,8 @@ import {
   TimesWrapper,
   TimesLabel
 } from './BookingElements'
-import Select from 'react-dropdown-select'
+import BaseSelect from "react-select";
+import FixRequiredSelect from "./FixRequiredSelect";
 
 
 const Booking = () => {
@@ -30,12 +31,40 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
     start_date = new Date(start_date.setDate(start_date.getDate() + 1));
   }
 
+  const [email, setEmail] = useState()
+
   const [date, setDate] = useState(start_date)
 
   const [options, setOptions] = useState()
 
+  const [time, setTime] = useState(undefined)
+
+  const handleInputChange = (event) => {
+    setEmail(event.target.value)
+  }
+
+  const handleSelectChange = (value) => {
+    setTime(value)
+  }
+
+  const handleCalendarChange = value => {
+    setDate(value)
+    setTime(undefined)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch('http://localhost:5000/post_appointment', {
+      'method':'POST',
+      'headers': {
+      'Accept':'applitcation/json',
+      'Content-Type':'application/json'
+      },
+      'body':JSON.stringify([email, date, time])
+    }).then(response => window.parent.location = `/intuit-app/thankyou?date=${date}&time=${time.label}`);
+  }
+
   useEffect(()=>{
-    console.log(date)
     fetch('http://localhost:5000/get_times', {
       'method':'POST',
       'headers': {
@@ -45,10 +74,17 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
       'body':JSON.stringify(date)
   })
   .then(response => response.json())
-  .then(response => setOptions(response))
+  .then(options => setOptions(options.options))
   .catch(error => console.log(error))
   },[date])
 
+  const Select = props => (
+    <FixRequiredSelect
+      {...props}
+      SelectComponent={BaseSelect}
+      options={props.options || options}
+    />
+  );
 
   return (
     <>
@@ -56,14 +92,14 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
         <FormWrap>
           <Icon to="/intuit-app">Intuit</Icon>
           <FormContent>
-            <Form action="#">
+            <Form onSubmit={handleSubmit}>
               <FormH1>Enter your email, then pick a date and time for your consultation</FormH1>
               <FormLabel htmlFor='for'>Email</FormLabel>
-              <FormInput type='email' required />
+              <FormInput type='email' onChange={handleInputChange} required />
               <CalendarWrapper>
                 <CalendarBook 
                   calendarType={"US"}
-                  onChange={setDate}
+                  onChange={handleCalendarChange}
                   value={date}
                   minDate={new Date()}
                   maxDate={oneYearFromNow}
@@ -79,13 +115,17 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
               </CalendarWrapper>
               <TimesWrapper>
                 <TimesLabel>Select time:</TimesLabel>
-                <Select 
-                  multi
-                  options={options}
-                  onChange={(values) => this.onchange(values)}
-                />
+                <div style={{width: '150px'}}>
+                  <Select 
+                    options={options}
+                    value={time}
+                    onChange={handleSelectChange}
+                    required
+                  />
+                </div>
               </TimesWrapper>
-              <FormButton type='submit'>Submit</FormButton>
+              <FormButton type="submit" value="Submit"
+              >Submit</FormButton>
             </Form>
           </FormContent>
         </FormWrap>

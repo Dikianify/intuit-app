@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
-  height: 913px;
+  min-height: 811px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -13,18 +13,6 @@ export const Container = styled.div`
     rgba(255, 211, 96, 1) 0%,
     rgba(255, 255, 221, 1) 100%
   );
-
-  @media screen and (max-width: 700px) {
-    height: 1100px;
-  }
-
-  @media screen and (max-width: 600px) {
-    height: 1400px;
-  }
-
-  @media screen and (max-width: 400px) {
-    height: 1800px;
-  }
 `
 
 export const FormWrap = styled.div`
@@ -54,10 +42,12 @@ export const Icon = styled(Link)`
 `
 
 export const FormContent = styled.div`
+  margin-top: 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 60px;
 
   @media screen and (max-wdith: 480px) {
     padding: 10px;
@@ -65,14 +55,14 @@ export const FormContent = styled.div`
 `
 
 export const Form = styled.form`
-  background: #fff;
-  width: 80%;
-  min-height: 80%;
-  max-width: 1200px;
+  background: #010101;
+  max-width: 500px;
+  height: auto;
+  width: 100%;
   z-index: 1;
   display: grid;
   margin: 0 auto;
-  padding: 50px 32px;
+  padding: 80px 32px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
@@ -82,29 +72,33 @@ export const Form = styled.form`
 `
 
 export const FormH1 = styled.h1`
-  color: #010101;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  color: #fff;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+`
+
+export const FormH2 = styled.h1`
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 20px;
   font-weight: 600;
-`
-
-export const Text = styled.span`
   text-align: center;
-  margin-left: 4%;
-  max-width: 90%;
-  color: #010101;
-  font-size: 16px;
-  margin-bottom: 10px;
-  font-style: italic;
 `
 
-export const List = styled.ul`
-  list-style-type: upper-roman;
+export const FormButton = styled(Link)`
+  background: #ffd260;
+  padding: 16px 0;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
   justify-content: center;
-  margin-left: 10%;
-  display: grid;
-  max-width: 80%;
-  
+  align-items: center;
+  text-decoration: none;
 `

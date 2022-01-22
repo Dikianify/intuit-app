@@ -10,34 +10,34 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/">How it works</FooterLink>
+              <FooterLink to="/intuit-app/howitworks">How it works</FooterLink>
               {/* <FooterLink to="/">Testimonials</FooterLink> */}
-              <FooterLink to="/">Who We Are</FooterLink>
-              <FooterLink to="/">Investors</FooterLink>
-              <FooterLink to="/">Terms of Service</FooterLink>
+              <FooterLink to="/intuit-app/aboutus">Who We Are</FooterLink>
+              <FooterLink to="/intuit-app">Investors</FooterLink>
+              <FooterLink to="/intuit-app">Terms of Service</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contact Us</FooterLinkTitle>
-              <FooterLink to="/">Contact</FooterLink>
-              <FooterLink to="/">Support</FooterLink>
-              <FooterLink to="/">Destinations</FooterLink>
-              <FooterLink to="/">Sponsorships</FooterLink>
+              <FooterLink to="/intuit-app">Contact</FooterLink>
+              <FooterLink to="/intuit-app">Support</FooterLink>
+              <FooterLink to="/intuit-app">Destinations</FooterLink>
+              <FooterLink to="/intuit-app">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Videos</FooterLinkTitle>
-              <FooterLink to="/">Submit Video</FooterLink>
-              <FooterLink to="/">Ambassadors</FooterLink>
-              <FooterLink to="/">Agency</FooterLink>
-              <FooterLink to="/">Influencer</FooterLink>
+              <FooterLink to="/intuit-app">Submit Video</FooterLink>
+              <FooterLink to="/intuit-app">Ambassadors</FooterLink>
+              <FooterLink to="/intuit-app">Agency</FooterLink>
+              <FooterLink to="/intuit-app">Influencer</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to="/">GitHub</FooterLink>
-              <FooterLink to="/">Yelp</FooterLink>
-              <FooterLink to="/">Youtube</FooterLink>
-              <FooterLink to="/">Linkedin</FooterLink>
+              <FooterLink to="/intuit-app">GitHub</FooterLink>
+              <FooterLink to="/intuit-app">Yelp</FooterLink>
+              <FooterLink to="/intuit-app">Youtube</FooterLink>
+              <FooterLink to="/intuit-app">Linkedin</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
