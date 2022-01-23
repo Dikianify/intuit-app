@@ -4,7 +4,7 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 
 export const Container = styled.div`
-  min-height: 811px;
+  min-height: 611px;
   bottom: 0;
   left: 0;
   right: 0;
