@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
-  height: 620px;
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
   @media screen and (max-width: 768px) {
-    height:810px;
+    height:1000px;
     padding: 100px 0;
+    padding-top: 40px;
   }
 `
 
@@ -35,13 +35,11 @@ export const InfoRow = styled.div`
 `
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col1;
 `
 
 export const Column2 = styled.div`    
-  margin-bottom: 15px;
   padding: 0 15px;
   grid-area: col2;
 `
@@ -95,5 +93,4 @@ export const ImgWrap = styled.div`
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px;
-  padding-right: 0;
 `

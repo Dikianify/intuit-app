@@ -5,10 +5,11 @@ import { Nav, NavbarContainer, NavLogo, NavLogoLink, MobileIcon, NavMenu, NavIte
 
 
 const Navbar = ({ toggle }) => {
+  console.log(window.screen.height);
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = ()=> {
-    if(window.scrollY >= 529) {
+    if(window.scrollY >= window.screen.height-80) {
       setScrollNav(true)
     }
     else {
@@ -24,7 +25,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogoLink to='home' smooth={true} duration={500} exact='true' offset={-80}>
+          <NavLogoLink to='home' smooth={true} duration={500} exact='true' offset={50}>
             <NavLogo src={Icon1}>
             </NavLogo> 
           </NavLogoLink>            
@@ -33,24 +34,16 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks 
-              to="about" 
-              smooth={true} 
-              duration={500} 
-              spy={true} 
-              exact='true' 
-              offset={-79}
-              >About
-              </NavLinks>
+              <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={0}>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover" smooth={true} duration={500} spy={true} exact='true' offset={-75}>Discover</NavLinks>
+              <NavLinks to="discover" smooth={true} duration={500} spy={true} exact='true' offset={0}>Discover</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services" smooth={true} duration={500} spy={true} exact='true' offset={-77}>Services</NavLinks>
+              <NavLinks to="services" smooth={true} duration={500} spy={true} exact='true' offset={0}>Services</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="signup" smooth={true} duration={500} spy={true} exact='true' offset={-75}>Consult</NavLinks>
+              <NavLinks to="signup" smooth={true} duration={500} spy={true} exact='true' offset={0}>Consult</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

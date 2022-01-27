@@ -17,7 +17,7 @@ const HeroSection = () => {
 
 
   return (
-    <HeroContainer id="home">
+    <HeroContainer id="home" style={{height:window.screen.height}}>
       <HeroBg>
         <VideoBg autoPlay muted src={Video} onEnded={() => onVideoEnd()} type='video/mp4' />
       </HeroBg>
@@ -31,7 +31,7 @@ const HeroSection = () => {
           duration={500} 
           spy={true} 
           exact='true' 
-          offset={-78}>
+          offset={-79}>
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
