@@ -25,7 +25,7 @@ const Thanks = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/intuit-app">Intuit</Icon>
+          <Icon to="/">Intuit</Icon>
           <FormContent>
             <Form action="#">
               <FormH1>Thank you for your submission! Your Zoom meeting will occur on this date:</FormH1>
@@ -33,7 +33,7 @@ const Thanks = () => {
               <FormH1>Any further submissions with this email will overwrite this requested time.</FormH1>
               <FormH1>Please be prepared to discuss company procedures in depth. Procedures involving data manipulation, Excel, database structure, and sending faxes / emails are areas especially ripe for automation.</FormH1>
               <FormH1>I look forward to speaking with you soon!</FormH1>
-              <FormButton to='/intuit-app'>Return to Homepage</FormButton>
+              <FormButton to='/'>Return to Homepage</FormButton>
             </Form>
           </FormContent>
         </FormWrap>

@@ -10,11 +10,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/intuit-app" element={<Home/>} />
-        <Route path="/intuit-app/booknow" element={<BookingPage/>} />
-        <Route path="/intuit-app/aboutus" element={<AboutusPage/>} />        
-        <Route path="/intuit-app/howitworks" element={<InfoPage/>} />
-        <Route path="/intuit-app/thankyou" element={<ThanksPage/>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/booknow" element={<BookingPage/>} />
+        <Route path="/aboutus" element={<AboutusPage/>} />        
+        <Route path="/howitworks" element={<InfoPage/>} />
+        <Route path="/thankyou" element={<ThanksPage/>} />
       </Routes>
     </Router>
   );

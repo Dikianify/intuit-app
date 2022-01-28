@@ -15,7 +15,7 @@ const Info = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/intuit-app">Intuit</Icon>
+          <Icon to="/">Intuit</Icon>
           <FormContent>
             <Form action="#">
               <FormH1>How it Works</FormH1>

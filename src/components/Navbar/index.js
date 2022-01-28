@@ -47,7 +47,7 @@ const Navbar = ({ toggle }) => {
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/intuit-app/booknow">Book Now</NavBtnLink>
+            <NavBtnLink to="/booknow">Book Now</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

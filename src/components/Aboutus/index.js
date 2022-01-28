@@ -14,7 +14,7 @@ const Aboutus = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to="/intuit-app">Intuit</Icon>
+          <Icon to="/">Intuit</Icon>
           <FormContent>
             <Form>
               <FormH1>Who We Are</FormH1>

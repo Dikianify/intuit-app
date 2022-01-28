@@ -17,7 +17,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="signup" onClick={toggle}>Consult</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='/intuit-app/booknow'>Book Now</SidebarRoute>
+          <SidebarRoute to='/booknow'>Book Now</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

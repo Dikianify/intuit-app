@@ -90,7 +90,7 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
     <>
       <Container>
         <FormWrap>
-          <Icon to="/intuit-app">Intuit</Icon>
+          <Icon to="/">Intuit</Icon>
           <FormContent>
             <Form onSubmit={handleSubmit}>
               <FormH1>Enter your email, then pick a date and time for your consultation</FormH1>

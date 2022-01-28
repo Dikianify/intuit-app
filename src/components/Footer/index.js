@@ -10,40 +10,40 @@ const Footer = () => {
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/intuit-app/howitworks">How it works</FooterLink>
+              <FooterLink to="/howitworks">How it works</FooterLink>
               {/* <FooterLink to="/">Testimonials</FooterLink> */}
-              <FooterLink to="/intuit-app/aboutus">Who We Are</FooterLink>
-              <FooterLink to="/intuit-app">Investors</FooterLink>
-              <FooterLink to="/intuit-app">Terms of Service</FooterLink>
+              <FooterLink to="/aboutus">Who We Are</FooterLink>
+              <FooterLink to="/">Investors</FooterLink>
+              <FooterLink to="/">Terms of Service</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Contact Us</FooterLinkTitle>
-              <FooterLink to="/intuit-app">Contact</FooterLink>
-              <FooterLink to="/intuit-app">Support</FooterLink>
-              <FooterLink to="/intuit-app">Destinations</FooterLink>
-              <FooterLink to="/intuit-app">Sponsorships</FooterLink>
+              <FooterLink to="/">Contact</FooterLink>
+              <FooterLink to="/">Support</FooterLink>
+              <FooterLink to="/">Destinations</FooterLink>
+              <FooterLink to="/">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Videos</FooterLinkTitle>
-              <FooterLink to="/intuit-app">Submit Video</FooterLink>
-              <FooterLink to="/intuit-app">Ambassadors</FooterLink>
-              <FooterLink to="/intuit-app">Agency</FooterLink>
-              <FooterLink to="/intuit-app">Influencer</FooterLink>
+              <FooterLink to="/">Submit Video</FooterLink>
+              <FooterLink to="/">Ambassadors</FooterLink>
+              <FooterLink to="/">Agency</FooterLink>
+              <FooterLink to="/">Influencer</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to="/intuit-app">GitHub</FooterLink>
-              <FooterLink to="/intuit-app">Yelp</FooterLink>
-              <FooterLink to="/intuit-app">Youtube</FooterLink>
-              <FooterLink to="/intuit-app">Linkedin</FooterLink>
+              <FooterLink to="/">GitHub</FooterLink>
+              <FooterLink to="/">Yelp</FooterLink>
+              <FooterLink to="/">Youtube</FooterLink>
+              <FooterLink to="/">Linkedin</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/intuit-app'>
+            <SocialLogo to='/'>
               Intuit
             </SocialLogo>
             <WebsiteRights>Intuit Automation Inc. © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
