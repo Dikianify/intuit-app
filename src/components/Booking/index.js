@@ -61,7 +61,7 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
       'Content-Type':'application/json'
       },
       'body':JSON.stringify([email, date, time])
-    }).then(response => window.parent.location = `/intuit-app/thankyou?date=${date}&time=${time.label}`);
+    }).then(response => window.parent.location = `/thankyou?date=${date}&time=${time.label}`);
   }
 
   useEffect(()=>{
