@@ -54,7 +54,7 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('https://flask-heroku-booking-api.herokuapp.com/post_appointment', {
+    fetch('https://intuit-booking-api.herokuapp.com/post_appointment', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',
@@ -65,7 +65,7 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
   }
 
   useEffect(()=>{
-    fetch('https://flask-heroku-booking-api.herokuapp.com/get_times', {
+    fetch('https://intuit-booking-api.herokuapp.com/get_times', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',
