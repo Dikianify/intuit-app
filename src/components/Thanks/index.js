@@ -33,7 +33,7 @@ const Thanks = () => {
               <FormH1>Any further submissions with this email will overwrite this requested time.</FormH1>
               <FormH1>Please be prepared to discuss company procedures in depth. Procedures involving data manipulation, Excel, database structure, and sending faxes / emails are areas especially ripe for automation.</FormH1>
               <FormH1>I look forward to speaking with you soon!</FormH1>
-              <FormButton to='/' href="#top">Return to Homepage</FormButton>
+              <FormButton to='/'>Return to Homepage</FormButton>
             </Form>
           </FormContent>
         </FormWrap>
