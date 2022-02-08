@@ -3,7 +3,7 @@
   "name": "intuit-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://flask-heroku-booking-api.herokuapp.com",
+  "proxy": "https://12.0.0.1:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -25,8 +25,8 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "start": "node --max_old_space_size=2560 node_modules/.bin/react-scripts start",
-    "build": "node --max_old_space_size=2560 node_modules/.bin/react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
