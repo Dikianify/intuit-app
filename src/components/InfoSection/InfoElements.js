@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
   color: #fff;
+  display: flex;
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+  justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     height:1000px;
@@ -14,7 +17,6 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 620px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

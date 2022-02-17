@@ -5,11 +5,8 @@ import 'react-calendar/dist/Calendar.css'
 
 export const Container = styled.div`
   min-height: 611px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     108deg,
     rgba(255, 211, 96, 1) 0%,

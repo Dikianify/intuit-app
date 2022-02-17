@@ -19,6 +19,8 @@ import FixRequiredSelect from "./FixRequiredSelect";
 
 
 const Booking = () => {
+  const height = window.innerHeight|| document.documentElement.clientHeight|| 
+  document.body.clientHeight;
   var oneYearFromNow = new Date();
 oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
   var today = new Date();
@@ -88,9 +90,9 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
   return (
     <>
-      <Container>
-        <FormWrap>
-          <Icon to="/">Intuit</Icon>
+      <Container style={{"min-height":height}}>
+        <Icon to="/">Intuit</Icon>
+        <FormWrap style={{"min-height":height -160}}>
           <FormContent>
             <Form onSubmit={handleSubmit}>
               <FormH1>Enter your email, then pick a date and time for your consultation</FormH1>

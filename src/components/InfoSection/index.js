@@ -7,7 +7,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkT
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id} style={{"min-height":window.screen.height-80}}>
-        <InfoWrapper style={{"padding-top":window.screen.height/10}}>
+        <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
             <TextWrapper>

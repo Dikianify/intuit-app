@@ -20,25 +20,25 @@ const parse_url = () => {
 
 
 const Thanks = () => {
+  const height = window.innerHeight|| document.documentElement.clientHeight|| 
+  document.body.clientHeight;
   var date, time = parse_url()
   return (
-    <>
-      <Container>
-        <FormWrap>
-          <Icon to="/">Intuit</Icon>
-          <FormContent>
-            <Form action="#">
-              <FormH1>Thank you for your submission! Your Zoom meeting will occur on this date:</FormH1>
-              <FormH2>{date} {time}</FormH2>
-              <FormH1>Any further submissions with this email will overwrite this requested time.</FormH1>
-              <FormH1>Please be prepared to discuss company procedures in depth. Procedures involving data manipulation, Excel, database structure, and sending faxes / emails are areas especially ripe for automation.</FormH1>
-              <FormH1>I look forward to speaking with you soon!</FormH1>
-              <FormButton to='/'>Return to Homepage</FormButton>
-            </Form>
-          </FormContent>
-        </FormWrap>
-      </Container>
-    </>
+    <Container style={{"min-height":height}}>
+      <Icon to="/">Intuit</Icon>
+      <FormWrap style={{"min-height":height -160}}>
+        <FormContent>
+          <Form action="#">
+            <FormH1>Thank you for your submission! Your Zoom meeting will occur on this date:</FormH1>
+            <FormH2>{date} {time}</FormH2>
+            <FormH1>Any further submissions with this email will overwrite this requested time.</FormH1>
+            <FormH1>Please be prepared to discuss company procedures in depth. Procedures involving data manipulation, Excel, database structure, and sending faxes / emails are areas especially ripe for automation.</FormH1>
+            <FormH1>I look forward to speaking with you soon!</FormH1>
+            <FormButton to='/'>Return to Homepage</FormButton>
+          </Form>
+        </FormContent>
+      </FormWrap>
+    </Container>
   )
 }
 
