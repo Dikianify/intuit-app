@@ -24,9 +24,9 @@ const Thanks = () => {
   document.body.clientHeight;
   var date, time = parse_url()
   return (
-    <Container style={{"min-height":height}}>
+    <Container style={{"minHeight":height}}>
       <Icon to="/">Intuit</Icon>
-      <FormWrap style={{"min-height":height -160}}>
+      <FormWrap style={{"minHeight":height -160}}>
         <FormContent>
           <Form action="#">
             <FormH1>Thank you for your submission! Your Zoom meeting will occur on this date:</FormH1>
