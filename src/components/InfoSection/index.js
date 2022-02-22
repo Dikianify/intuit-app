@@ -6,8 +6,8 @@ import {InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopL
 const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, destination, description, buttonLabel, img, alt, primary, dark, dark2}) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id} style={{"min-height":window.screen.height-80}}>
-        <InfoWrapper>
+      <InfoContainer lightBg={lightBg} id={id} style={{"minHeight":window.screen.height-80}}>
+        <InfoWrapper style={{"minHeight":window.screen.height-80}}>
           <InfoRow imgStart={imgStart}>
             <Column1>
             <TextWrapper>

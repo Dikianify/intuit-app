@@ -90,9 +90,9 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
   return (
     <>
-      <Container style={{"min-height":height}}>
+      <Container style={{"minHeight":height}}>
         <Icon to="/">Intuit</Icon>
-        <FormWrap style={{"min-height":height -160}}>
+        <FormWrap style={{"minHeight":height -160}}>
           <FormContent>
             <Form onSubmit={handleSubmit}>
               <FormH1>Enter your email, then pick a date and time for your consultation</FormH1>

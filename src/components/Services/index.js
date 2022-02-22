@@ -6,7 +6,7 @@ import {ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIc
 
 const Services = () => {
   return (
-    <ServicesContainer id="services" style={{"min-height":window.screen.height}}>
+    <ServicesContainer id="services" style={{"minHeight":window.screen.height}}>
       <ServicesH1>Our Services</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>

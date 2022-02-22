@@ -5,7 +5,6 @@ import { Nav, NavbarContainer, NavLogo, NavLogoLink, MobileIcon, NavMenu, NavIte
 
 
 const Navbar = ({ toggle }) => {
-  console.log(window.screen.height);
   const [scrollNav, setScrollNav] = useState(false)
 
   const changeNav = ()=> {
