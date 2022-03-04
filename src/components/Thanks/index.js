@@ -20,7 +20,7 @@ const Thanks = () => {
 
   const url = window.location.href
   const date=url.slice(url.indexOf("date=") + 8, url.indexOf("date=") + 26).replaceAll('%20', ' ') + "  from  "
-  const time=url.slice(url.indexOf("time=") + 5, url.indexOf("time=") + 22).replaceAll('%20', ' ')
+  const time=url.slice(url.indexOf("time=") + 5, url.indexOf("time=") + 22).replaceAll('%20', ' ').replaceAll('&e', '')
   const email=url.slice(url.indexOf("email=") + 6)
 
 
