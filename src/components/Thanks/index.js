@@ -20,10 +20,14 @@ const parse_url = () => {
 
 
 const Thanks = () => {
-  const height = window.innerHeight|| document.documentElement.clientHeight|| 
+  var height = window.innerHeight|| document.documentElement.clientHeight|| 
   document.body.clientHeight;
+  if (height < 1000) {
+    height=1000;
+  }
   var date, time = parse_url()
   return (
+    <>
     <Container style={{"minHeight":height}}>
       <Icon to="/">Intuit</Icon>
       <FormWrap style={{"minHeight":height -160}}>
@@ -39,6 +43,7 @@ const Thanks = () => {
         </FormContent>
       </FormWrap>
     </Container>
+    </>
   )
 }
 
