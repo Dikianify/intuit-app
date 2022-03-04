@@ -25,7 +25,7 @@ const Thanks = () => {
 
 
   useEffect((email, date, time)=>{
-    fetch('http://localhost:5000/cancellation_email', {
+    fetch('https://intuit-booking-api.herokuapp.com/cancellation_email', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',

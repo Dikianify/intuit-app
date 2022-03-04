@@ -17,7 +17,7 @@ const Cancelled = () => {
   useEffect(() => {
     const url = window.location.href
     const email=url.slice(url.indexOf("email=") + 6)
-    fetch('http://localhost:5000/cancel_booking', {
+    fetch('https://intuit-booking-api.herokuapp.com/cancel_booking', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',
