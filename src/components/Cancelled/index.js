@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Container,
   FormWrap,
@@ -10,27 +10,22 @@ import {
 } from './CancelledElements'
 
 
-const cancel_booking = () => {
-  const url = window.location.href
-  const email=url.slice(url.indexOf("email=") + 6)
-  console.log(email)
-  fetch('https://intuit-booking-api.herokuapp.com/cancel_booking', {
-    'method':'POST',
-    'headers': {
-    'Accept':'applitcation/json',
-    'Content-Type':'application/json'
-    },
-    'body':JSON.stringify(email)
-  })
-  return
-}
-
-
 const Cancelled = () => {
   var height = window.innerHeight|| document.documentElement.clientHeight|| 
   document.body.clientHeight;
+  const url = window.location.href
+  const email=url.slice(url.indexOf("email=") + 6)
 
-  cancel_booking()
+  useEffect(() => {
+    fetch('http://localhost:5000/cancel_booking', {
+      'method':'POST',
+      'headers': {
+      'Accept':'applitcation/json',
+      'Content-Type':'application/json'
+      },
+      'body':JSON.stringify(email)
+    })
+  }, [])
 
   return (
     <>

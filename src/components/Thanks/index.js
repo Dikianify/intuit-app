@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import {
   Container,
   FormWrap,
@@ -11,21 +11,29 @@ import {
 } from './ThanksElements'
 
 
-const parse_url = () => {
-  const url = window.location.href
-  const date=url.slice(url.indexOf("date=") + 8, url.indexOf("date=") + 26).replaceAll('%20', ' ') + "  from  "
-  const time=url.slice(url.indexOf("time=") + 5, url.indexOf("time=") + 22).replaceAll('%20', ' ')
-  return [date, time]
-}
-
-
 const Thanks = () => {
   var height = window.innerHeight|| document.documentElement.clientHeight|| 
   document.body.clientHeight;
   if (height < 1000) {
     height=1000;
   }
-  var date, time = parse_url()
+
+  const url = window.location.href
+  const date=url.slice(url.indexOf("date=") + 8, url.indexOf("date=") + 26).replaceAll('%20', ' ') + "  from  "
+  const time=url.slice(url.indexOf("time=") + 5, url.indexOf("time=") + 22).replaceAll('%20', ' ')
+  const email=url.slice(url.indexOf("email=") + 6)
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/cancellation_email', {
+      'method':'POST',
+      'headers': {
+      'Accept':'applitcation/json',
+      'Content-Type':'application/json'
+      },
+      'body':JSON.stringify([email, date, time])
+    })
+    },[])
+
   return (
     <>
     <Container style={{"minHeight":height}}>

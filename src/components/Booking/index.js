@@ -56,18 +56,18 @@ oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('https://intuit-booking-api.herokuapp.com/post_appointment', {
+    fetch('http://localhost:5000/post_appointment', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',
       'Content-Type':'application/json'
       },
       'body':JSON.stringify([email, date, time])
-    }).then(response => window.parent.location = `/thankyou?date=${date}&time=${time.label}`);
+    }).then(response => window.parent.location = `/thankyou?date=${date}&time=${time.label}&email=${email}`);
   }
 
   useEffect(()=>{
-    fetch('https://intuit-booking-api.herokuapp.com/get_times', {
+    fetch('http://localhost:5000/get_times', {
       'method':'POST',
       'headers': {
       'Accept':'applitcation/json',
