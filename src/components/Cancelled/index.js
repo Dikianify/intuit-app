@@ -13,10 +13,10 @@ import {
 const Cancelled = () => {
   var height = window.innerHeight|| document.documentElement.clientHeight|| 
   document.body.clientHeight;
-  const url = window.location.href
-  const email=url.slice(url.indexOf("email=") + 6)
 
   useEffect(() => {
+    const url = window.location.href
+    const email=url.slice(url.indexOf("email=") + 6)
     fetch('http://localhost:5000/cancel_booking', {
       'method':'POST',
       'headers': {

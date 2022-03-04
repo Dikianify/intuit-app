@@ -23,7 +23,8 @@ const Thanks = () => {
   const time=url.slice(url.indexOf("time=") + 5, url.indexOf("time=") + 22).replaceAll('%20', ' ')
   const email=url.slice(url.indexOf("email=") + 6)
 
-  useEffect(()=>{
+
+  useEffect((email, date, time)=>{
     fetch('http://localhost:5000/cancellation_email', {
       'method':'POST',
       'headers': {
@@ -32,7 +33,7 @@ const Thanks = () => {
       },
       'body':JSON.stringify([email, date, time])
     })
-    },[])
+    },[email, date, time])
 
   return (
     <>
