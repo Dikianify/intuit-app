@@ -24,7 +24,7 @@ const Thanks = () => {
   const email=url.slice(url.indexOf("email=") + 6)
 
 
-  useEffect((email, date, time)=>{
+  useEffect(()=>{
     fetch('https://intuit-booking-api.herokuapp.com/cancellation_email', {
       'method':'POST',
       'headers': {
@@ -33,7 +33,7 @@ const Thanks = () => {
       },
       'body':JSON.stringify([email, date, time])
     })
-    },[email, date, time])
+    },[])
 
   return (
     <>
