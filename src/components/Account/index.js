@@ -12,9 +12,9 @@ const Account = () => {
 document.body.clientHeight;
   return (
     <>
-      <Container style={{"min-height":height}}>
+      <Container style={{"minHeight":height}}>
         <Icon to="/">Intuit</Icon>
-        <FormWrap style={{"min-height":height - 160}}>
+        <FormWrap style={{"minHeight":height - 160}}>
           <FormContent>
             <Form>
             </Form>

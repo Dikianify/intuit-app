@@ -57,7 +57,7 @@ const SignIn = () => {
               <FormButton type="submit" value="Submit"
               >Sign In</FormButton>
               <TextLink to="/">Forgot password?</TextLink>
-              <TextLink to="/">Sign up</TextLink>
+              <TextLink to="/signup">Sign up</TextLink>
             </Form>
           </FormContent>
         </FormWrap>

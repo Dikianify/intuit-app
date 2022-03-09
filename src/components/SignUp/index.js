@@ -21,8 +21,6 @@ const SignUp = () => {
 
   const [pass, setPass] = useState()
 
-  const [confirmPass, setConfirmPass] = useState()
-
   const [name, setName] = useState()
 
   const [company, setCompany] = useState()
@@ -30,15 +28,30 @@ const SignUp = () => {
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value)
-  }
+    fetch('http://localhost:5000/check_email', {
+      'method':'POST',
+      'headers': {
+      'Accept':'applitcation/json',
+      'Content-Type':'application/json'
+      },
+      'body':JSON.stringify(event.target.value)
+    }).then(response => response.json())
+      .then(data => {
+        var email_input = document.getElementById("email");
+        (data === 'not ok' ? email_input.setCustomValidity("This email is already in use.") :
+        email_input.setCustomValidity(""))
+      })
+    }
 
   const handlePassChange = (event) => {
     setPass(event.target.value)
   }
 
   const handleConfirmPassChange = (event) => {
-    setConfirmPass(event.target.value)
-  }
+    var pass_input = document.getElementById("pass");
+    (pass === event.target.value ? pass_input.setCustomValidity("") : 
+      pass_input.setCustomValidity("Passwords must match."));
+    }
 
   const handleNameChange = (event) => {
     setName(event.target.value)
@@ -50,30 +63,15 @@ const SignUp = () => {
 
 
   const handleSubmit = (event) => {
-    if (pass === confirmPass) {
-      event.preventDefault();
-      fetch('http://localhost:5000/create_account', {
-        'method':'POST',
-        'headers': {
-        'Accept':'applitcation/json',
-        'Content-Type':'application/json'
-        },
-        'body':JSON.stringify([email, pass, name, company])
-      }).then(response => response.json())
-        .then(data => {
-          if (data === 'not ok') {
-            var email_input = document.getElementsById("email");
-            email_input.setCustomValidity("This email is already in use.");
-          }
-          else {
-            window.parent.location = `/account`;
-          }
-        });
-    }
-    else {
-      var pass_input = document.getElementsById("email");
-      pass_input.setCustomValidity("Passwords must match.")
-    }
+    event.preventDefault();
+    fetch('http://localhost:5000/create_account', {
+      'method':'POST',
+      'headers': {
+      'Accept':'applitcation/json',
+      'Content-Type':'application/json'
+      },
+      'body':JSON.stringify([email, pass, name, company])
+    }).then(response => window.parent.location = `/account`)
   }
 
   return (
@@ -87,13 +85,13 @@ const SignUp = () => {
               <FormLabel htmlFor='for'>Email</FormLabel>
               <FormInput id='email' type='email' onChange={handleEmailChange} required />
               <FormLabel htmlFor='for'>Password</FormLabel> 
-              <FormInput id='pass' type='password' onChange={handlePassChange} required />
+              <FormInput type='password' onInput={handlePassChange} required />
               <FormLabel htmlFor='for'>Confirm password</FormLabel> 
-              <FormInput type='password' onChange={handleConfirmPassChange} required />
+              <FormInput id='pass' type='password' onInput={handleConfirmPassChange} required />
               <FormLabel htmlFor='for'>Name (optional)</FormLabel> 
-              <FormInput type='text' onChange={handleNameChange} /> 
+              <FormInput type='text' onInput={handleNameChange} /> 
               <FormLabel htmlFor='for'>Company (optional)</FormLabel> 
-              <FormInput type='text' onChange={handleCompanyChange} /> 
+              <FormInput type='text' onInput={handleCompanyChange} /> 
               <FormButton type="submit" value="Submit"
               >Create Account</FormButton>
               <TextLink to="/signin">Already have an account? Sign in here.</TextLink>
