@@ -33,7 +33,7 @@ const Thanks = () => {
       },
       'body':JSON.stringify([email, date, time])
     })
-    },[])
+    })
 
   return (
     <>
